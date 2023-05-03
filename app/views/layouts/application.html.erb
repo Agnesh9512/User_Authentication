@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Authentication</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+
+<body>
+<p class="notice text-success"><%= notice %></p>
+<p class="alert text-danger"><%= alert %></p>
+<%#= user_signed_in? %>
+<%= yield %>
+</body>
+</html>
+
