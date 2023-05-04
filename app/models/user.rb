@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   rolify
+  has_many :products
   enum role: [:newuser, :admin]
   extend FriendlyId
   friendly_id :name, use: :slugged
