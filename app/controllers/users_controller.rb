@@ -5,11 +5,13 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @products = Product.all
     authorize @users
     respond_to do |format|
       format.html # index.html.erb
-      format.xml { render :xml => @users }
+      format.xml { render xml: @users }
     end
+
     # @user = User.friendly.find(params[:id])
     # authorize @user
 

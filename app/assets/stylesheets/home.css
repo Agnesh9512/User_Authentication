@@ -1,9 +1,70 @@
 body{
   font-family: 'Inter', serif;
 }
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-image: image('background.jpeg');
+  background-repeat: no-repeat;
+}
 table, th, td {
-  border: 2px solid black;
+  /*border: 2px solid black;*/
 }
 table {
   width: 100%;
 }
+td {
+  padding: 5px;
+}
+#welcome_title{
+  text-align: center;
+}
+#nav_logout{
+  float: right;
+}
+
+#product_title{
+  text-align: center;
+}
+#new_manage {
+/*float: right;*/
+}
+#del_show{
+  float: right;
+}
+#show_product{
+  margin-top: 2px;
+}
+#products{
+  text-align: center;
+}
+.edit_card{
+  display: flex;
+  justify-content: center;
+}
+.card-header{
+  text-align: center;
+}
+#show_back_card{
+  text-align: center;
+}
+.card-body{
+  text-align: center;
+}
+#form_details{
+  text-align: center;
+}
+.form_field{
+  text-align: left;
+  margin-bottom: 2px;
+}
+
+

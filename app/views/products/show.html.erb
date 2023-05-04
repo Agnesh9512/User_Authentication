@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+<%= stylesheet_link_tag 'home.css' %>
+<body class="m-2">
+
+
+<%= render @product %>
+<br>
+<div>
+  <span>
+  <%= link_to "Edit this product", edit_product_path(@product), class: 'btn btn-primary btn-sm' %> |
+    <%= link_to "Back to products", manage_products_path, class: 'btn btn-primary btn-sm' %> |
+    <%= link_to "Home", welcome_index_path, class: 'btn btn-secondary btn-sm' %>
+    <%= link_to "Delete this product", product_path, method: :delete, class: 'btn btn-danger btn-sm', id: 'del_show' %>
+  </span>
+</div>
+</body>
+

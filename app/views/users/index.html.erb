@@ -1,24 +1,29 @@
 <%= stylesheet_link_tag 'home.css' %>
-<div class="m-2">
-  <table>
+<body class="m-2">
+<div>
+  <table class="table table-hover">
+    <thead>
     <tr id="title">
       <th>Name</th>
       <th>Email Id</th>
       <th>Edit User</th>
-      <th>Details of User</th>
+      <!--      <th>Details of User</th>-->
       <th>Delete User</th>
     </tr>
+    </thead>
     <%# paginate @users %>
     <% @users.each do |user| %>
       <tr>
         <td title= <%= user.name %>><%= user.name %> <%= user.roles.pluck(:name) %></td>
         <td title= <%= user.email %>><%= user.email %> </td>
         <td title="Edit <%= user.name %>"><%= link_to 'Edit Role', edit_user_path(user), class: "navbar-link" %></td>
-<!--        <td title="Details of <%#= user.title %>"> <%#= link_to "Details", user_path(user) %> </td>-->
+        <!--        <td title="Details of <%#= user.name %>"> <%#= link_to "Details", user_path(user) %> </td>-->
         <td title="Delete <%= user.name %>"> <%= link_to 'Delete', user_path(user), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
   </table>
-</div><br>
+</div>
+<br>
+</body>
 <%#= user.current_sign_in_ip %>
 

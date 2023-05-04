@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+<%= stylesheet_link_tag 'home.css' %>
+
+<h1 id="products" class="bg-info">Products</h1>
+<br>
+<div>
+  <% @products.each do |product| %>
+    <%= render product %>
+    <p id="show_product"><%= link_to "Show Product", product, class: 'btn btn-success btn-sm' %></p>
+  <% end %>
+  <p><%= link_to "New product", new_product_path, class: 'btn btn-primary btn-sm' %></p>
+  <p><%= link_to "Home", welcome_index_path, class: 'btn btn-secondary btn-sm' %></p>
+</div>
+
+
+
+
